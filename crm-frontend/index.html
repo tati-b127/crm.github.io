@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="clientbase.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="main.css">
+    <title>CRM</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="src/img/logo.svg" alt="Logo" width="50" height="50">
+            <form class="form-search" action="" method="get">
+                <input class="input-search" type="search" name="search" id="search" placeholder="Введите запрос">
+            </form>
+        </header>
+        <main class="main">
+            <h1 class="title">Клиенты</h1>
+            <table class="table">
+                <thead>
+                    <tr id="table-head" width="100%">
+                        <th data-column="id" scope="col">ID<span></span></th>
+                        <th data-column="fullName" scope="col">Фамилия Имя Отчество<span>А-Я</span></th>
+                        <th data-column="createdAt" scope="col">Дата и время создания<span></span></th>
+                        <th data-column="updatedAt" scope="col">Последние изменения<span></span></th>
+                        <th scope="col">Контакты</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="clients-list" class="table-scroll">
+                </tbody>
+            </table>
+            <button class="btn-add">Добавить клиента</button>
+        </main>
+    </div>
+
+</body>
+
+</html>
